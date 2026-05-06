@@ -2395,8 +2395,50 @@ input, select, textarea {
 				margin-top: 0.5em;
 			}
 
-		#main .contact-page .contact-gallery .image.featured {
-			margin-bottom: 0;
+		#main .contact-page .contact-gallery img {
+			display: block;
+			width: 100%;
+			height: auto;
+			max-height: 12rem;
+		}
+
+		#main .contact-page .contact-gallery .contact-gallery-cell {
+			min-height: 0;
+		}
+
+		#main .contact-page .contact-gallery .contact-gallery-cell--1 {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		#main .contact-page .contact-gallery .contact-gallery-cell--2 {
+			/* top-right grid cell */
+		}
+
+		#main .contact-page .contact-gallery .contact-gallery-cell--3 {
+			/* bottom-left grid cell */
+		}
+
+		#main .contact-page .contact-gallery .contact-gallery-cell--4 {
+			/* bottom-right grid cell */
+		}
+
+		#main .contact-page .contact-gallery #contact-gallery-photo-1 {
+			width: auto;
+			max-width: 100%;
+		}
+
+		#main .contact-page .contact-gallery #contact-gallery-photo-2 {
+			/* photo 2 */
+		}
+
+		#main .contact-page .contact-gallery #contact-gallery-photo-3 {
+			/* photo 3 */
+		}
+
+		#main .contact-page .contact-gallery #contact-gallery-photo-4 {
+			width: auto;
+			max-width: 100%;
 		}
 
 		@media screen and (max-width: 980px) {
@@ -2405,6 +2447,13 @@ input, select, textarea {
 				margin-top: 2em;
 			}
 
+		}
+
+		#main .about-me-image {
+			display: block;
+			max-width: min(100%, 52rem);
+			margin: 1em 0em 1em 0em;
+			border-radius: 4px;
 		}
 
 /* Footer */

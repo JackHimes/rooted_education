@@ -1182,8 +1182,51 @@
 				}
 			}
 
-			.contact-gallery .image.featured {
-				margin-bottom: 0;
+			.contact-gallery {
+				img {
+					display: block;
+					width: 100%;
+					height: auto;
+					max-height: 12rem;
+				}
+
+				.contact-gallery-cell {
+					min-height: 0;
+				}
+
+				.contact-gallery-cell--1 {
+					display: flex;
+					justify-content: flex-end;
+				}
+
+				.contact-gallery-cell--2 {
+					/* top-right grid cell */
+				}
+
+				.contact-gallery-cell--3 {
+					/* bottom-left grid cell */
+				}
+
+				.contact-gallery-cell--4 {
+					/* bottom-right grid cell */
+				}
+
+				#contact-gallery-photo-1 {
+					width: auto;
+					max-width: 100%;
+				}
+
+				#contact-gallery-photo-2 {
+					/* photo 2 */
+				}
+
+				#contact-gallery-photo-3 {
+					/* photo 3 */
+				}
+
+				#contact-gallery-photo-4 {
+					width: auto;
+				}
 			}
 
 			@include breakpoint('<=medium') {
@@ -1191,6 +1234,13 @@
 					margin-top: 2em;
 				}
 			}
+		}
+
+		.about-me-image {
+			display: block;
+			max-width: min(100%, 52rem);
+			margin: 1em 0em 1em 0em;
+			border-radius: 4px;
 		}
 	}
 
