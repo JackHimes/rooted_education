@@ -1757,6 +1757,14 @@ input, select, textarea {
 				margin-left: 0;
 			}
 
+		ul.actions.actions-centered {
+			text-align: center;
+		}
+
+	.align-center {
+		text-align: center;
+	}
+
 /* Links */
 
 	ul.links {
@@ -2366,6 +2374,34 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#main .how-it-works .how-it-works__images {
+				margin-top: 2em;
+			}
+
+		}
+
+		#main .contact-page .contact-form {
+			text-align: left;
+		}
+
+			#main .contact-page .contact-form .field {
+				margin: 0 0 1.25em 0;
+			}
+
+			#main .contact-page .contact-form textarea {
+				height: 8em;
+			}
+
+			#main .contact-page .contact-form ul.actions {
+				margin-top: 0.5em;
+			}
+
+		#main .contact-page .contact-gallery .image.featured {
+			margin-bottom: 0;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#main .contact-page .contact-gallery {
 				margin-top: 2em;
 			}
 

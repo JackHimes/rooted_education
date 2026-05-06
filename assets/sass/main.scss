@@ -538,6 +538,14 @@
 				margin-left: 0;
 			}
 		}
+
+		&.actions-centered {
+			text-align: center;
+		}
+	}
+
+	.align-center {
+		text-align: center;
 	}
 
 /* Links */
@@ -1152,6 +1160,34 @@
 
 			@include breakpoint('<=medium') {
 				.how-it-works__images {
+					margin-top: 2em;
+				}
+			}
+		}
+
+		.contact-page {
+			.contact-form {
+				text-align: left;
+
+				.field {
+					margin: 0 0 1.25em 0;
+				}
+
+				textarea {
+					height: 8em;
+				}
+
+				ul.actions {
+					margin-top: 0.5em;
+				}
+			}
+
+			.contact-gallery .image.featured {
+				margin-bottom: 0;
+			}
+
+			@include breakpoint('<=medium') {
+				.contact-gallery {
 					margin-top: 2em;
 				}
 			}
