@@ -1962,6 +1962,10 @@ ul.social li a.fa-google-plus:hover {
 #main .contact-page .contact-form {
   text-align: left;
 }
+#main .contact-page .contact-form .contact-form-error {
+  color: #8b2e2e;
+  margin: 0 0 1em 0;
+}
 #main .contact-page .contact-form .field {
   margin: 0 0 1.25em 0;
 }

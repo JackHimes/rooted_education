@@ -45,9 +45,9 @@
 								</header>
 								<div class="row aln-middle">
 									<div class="col-6 col-12-medium">
-										<form class="contact-form" method="post" action="https://formspree.io/f/xeevjpny">
+										<form class="contact-form" id="contact-form" method="post" action="https://formspree.io/f/xeevjpny">
 											<input type="hidden" name="_subject" value="Rooted Education — contact form" />
-											<input type="hidden" name="_next" value="https://rootededucation.org/thank-you.html" />
+											<p class="contact-form-error" id="contact-form-error" hidden>Something went wrong sending your message. Please try again.</p>
 											<div class="field">
 												<label for="contact-name">Name</label>
 												<input type="text" id="contact-name" name="name" autocomplete="name" required />
@@ -99,5 +99,37 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			(function () {
+				var form = document.getElementById('contact-form');
+				if (!form) return;
+
+				form.addEventListener('submit', function (event) {
+					event.preventDefault();
+
+					var submitBtn = form.querySelector('button[type="submit"]');
+					var errorEl = document.getElementById('contact-form-error');
+					if (errorEl) errorEl.hidden = true;
+					if (submitBtn) submitBtn.disabled = true;
+
+					fetch(form.action, {
+						method: 'POST',
+						body: new FormData(form),
+						headers: { 'Accept': 'application/json' }
+					})
+						.then(function (response) {
+							if (response.ok) {
+								window.location.href = 'thank-you.html';
+								return;
+							}
+							throw new Error('Form submission failed');
+						})
+						.catch(function () {
+							if (errorEl) errorEl.hidden = false;
+							if (submitBtn) submitBtn.disabled = false;
+						});
+				});
+			})();
+		</script>
 	</body>
 </html>
